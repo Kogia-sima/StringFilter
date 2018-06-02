@@ -4,6 +4,7 @@
  */
 
 #include <stdexcept>
+#include "StringFilter/Node.hpp"
 #include "StringFilter/Parser.hpp"
 
 Node* Parser::parse(const char* expr) {

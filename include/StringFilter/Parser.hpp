@@ -7,7 +7,9 @@
 #define STRINGFILTER_PARSER_HPP
 
 #include "StringView.hpp"
-#include "Node.hpp"
+
+class Node;
+
 
 class Parser {
  public:
