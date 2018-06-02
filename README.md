@@ -2,20 +2,6 @@
 
 StringFilter is a fast filter for strings. Basic boolean operators (and, or, not) are supported.
 
-## Python interface
-
-Although StringFilter is written in C++, you can also use it as python module.
-
-For example,
-
-```python
-import StringFilter
-
-sf = StringFilter.StringFilter("apple or (not orange and strawberry)")
-sf.is_valid('This is an apple pie.')  # => True
-sf.is_valid('straw is an agricultural by-product.')  # => False
-```
-
 ## Build
 
 ```console
