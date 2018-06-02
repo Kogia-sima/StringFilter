@@ -4,7 +4,7 @@
  */
 
 #include <cstdio>
-#include "example1/Node.hpp"
+#include "StringFilter/Node.hpp"
 
 Node::~Node() {
   destroy_recursive();

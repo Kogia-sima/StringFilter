@@ -6,9 +6,8 @@
 #ifndef STRINGFILTER_PARSER_HPP
 #define STRINGFILTER_PARSER_HPP
 
-#include <cstring>
-#include "example1/StringView.hpp"
-#include "example1/Node.hpp"
+#include "StringView.hpp"
+#include "Node.hpp"
 
 class Parser {
  public:

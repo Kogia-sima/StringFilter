@@ -4,7 +4,7 @@
  */
 
 #include <cstring>
-#include "example1/StringView.hpp"
+#include "StringFilter/StringView.hpp"
 
 StringView::StringView(const char* ptr) {
   M_ptr = ptr;
