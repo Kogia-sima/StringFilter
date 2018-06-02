@@ -1,0 +1,7 @@
+/old/
+/build/
+
+output/
+
+*.so
+*.o
