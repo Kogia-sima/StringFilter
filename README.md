@@ -11,7 +11,7 @@ For example,
 ```python
 import StringFilter
 
-sf = StringFilter("apple or (not orange and strawberry)")
+sf = StringFilter.StringFilter("apple or (not orange and strawberry)")
 sf.is_valid('This is an apple pie.')  # => True
 sf.is_valid('straw is an agricultural by-product.')  # => False
 ```
