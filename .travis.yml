@@ -1,0 +1,22 @@
+dist: trusty
+sudo: require
+language: cpp
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-5
+      - g++-5
+      - cmake
+      - cmake-data
+      - python3
+      - python3-pip
+
+install:
+  - pip3 install pytest
+  - pip3 install .
+
+script:
+  - python3 -m pytest test/test.py
