@@ -1,5 +1,7 @@
 # StringFilter Library
 
+[![Build Status](https://travis-ci.org/Kogia-sima/StringFilter.svg?branch=master)](https://travis-ci.org/Kogia-sima/StringFilter)
+
 StringFilter is a fast filter for strings. Basic boolean operators (and, or, not) are supported.
 
 ## Build
