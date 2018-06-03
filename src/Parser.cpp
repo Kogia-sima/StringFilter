@@ -8,8 +8,15 @@
 #include "StringFilter/Parser.hpp"
 
 Node* Parser::parse(const char* expr) {
+  if (expr[0] == '\0') {
+    return new Node(StringView("", 0), NodeType::NONE);
+  }
+
   M_expr = expr;
   Node* pRoot = expression();
+  if (peek() != '\0') {
+    throw std::runtime_error("Reached the end of expression while parsing.");
+  }
   return pRoot;
 }
 
