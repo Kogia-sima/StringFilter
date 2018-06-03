@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 2.8)
+
+add_executable(rabbit_and_turtle rabbit_and_turtle.cpp)
+target_link_libraries(rabbit_and_turtle StringFilterCpp)

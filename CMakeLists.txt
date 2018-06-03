@@ -9,6 +9,8 @@ set(VERSION_MAJOR 1)
 
 include_directories(include)
 
+add_subdirectory(example)
+
 add_library(StringFilterCpp SHARED
   src/StringView.cpp
   src/Node.cpp
