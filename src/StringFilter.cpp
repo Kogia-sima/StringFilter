@@ -4,13 +4,20 @@
  */
 
 #include <stdexcept>
+#include <cstdio>
+#include <cstring>
 #include "StringFilter/Node.hpp"
 #include "StringFilter/Parser.hpp"
 #include "StringFilter/StringFilter.hpp"
 
 StringFilter::StringFilter(const char* sentence) {
+  // hold memory not to be deleted.
+  std::size_t capacity = strlen(sentence) + 1;
+  M_sentence = new char[capacity];
+  memcpy(M_sentence, sentence, capacity * sizeof(char));
+
   Parser parser;
-  M_root = parser.parse(sentence);
+  M_root = parser.parse(M_sentence);
 }
 
 bool StringFilter::is_valid(const char* str) const {

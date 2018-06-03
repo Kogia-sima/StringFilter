@@ -16,12 +16,16 @@ class StringFilter {
 
   bool is_valid(const char* str) const;
 
-  ~StringFilter() { delete M_root; }
+  ~StringFilter() {
+    delete M_sentence;
+    delete M_root;
+  }
 
  protected:
   bool is_valid_recursive(Node* const node, const StringView&) const;
 
  private:
+  char* M_sentence;
   Node* M_root;
 };
 
