@@ -7,10 +7,19 @@ set(VERSION_MAJOR 1)
 
 include_directories(include)
 
-add_library(StringFilter src/StringView.cpp src/Node.cpp src/Parser.cpp src/StringFilter.cpp)
+add_library(StringFilter
+  src/StringView.cpp
+  src/Node.cpp
+  src/Parser.cpp
+  src/StringFilter.cpp)
 set_target_properties(StringFilter
   PROPERTIES VERSION ${VERSION_STRING}
              SOVERSION ${VERSION_MAJOR}
 )
+
+install(
+  DIRECTORY include/StringFilter
+  DESTINATION include
+  COMPONENT includes)
 
 install(TARGETS StringFilter DESTINATION lib COMPONENT libs)
