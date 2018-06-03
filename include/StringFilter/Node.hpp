@@ -34,6 +34,14 @@ class Node {
 
   void setRight(Node* node) noexcept { M_right = node; }
 
+  Node* getLeft() const noexcept { return M_left; }
+
+  Node* getRight() const noexcept { return M_right; }
+
+  StringView& getValue() noexcept { return M_value; }
+
+  const StringView& getValue() const noexcept { return M_value; }
+
   void debug_print() const noexcept;
 
  protected:
