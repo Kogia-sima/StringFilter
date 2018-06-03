@@ -24,7 +24,7 @@ bool StringFilter::is_valid(const char* str) const {
   if (M_root->type() == NodeType::NONE) {
     return true;
   } else {
-    is_valid_recursive(M_root, StringView(str));
+    return is_valid_recursive(M_root, StringView(str));
   }
 }
 
