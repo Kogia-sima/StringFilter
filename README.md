@@ -1,6 +1,6 @@
 # StringFilter Library
 
-[![Build Status](https://travis-ci.org/Kogia-sima/StringFilter.svg?branch=master)](https://travis-ci.org/Kogia-sima/StringFilter)
+[![Build Status](https://travis-ci.org/Kogia-sima/StringFilter.svg?branch=master)](https://travis-ci.org/Kogia-sima/StringFilter) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![gcc version](https://img.shields.io/badge/gcc-4.8-blue.svg) ![clang version](https://img.shields.io/badge/clang-3.7-blue.svg)
 
 StringFilter is a fast filter for strings. Basic boolean operators (and, or, not) are supported.
 
