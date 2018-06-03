@@ -2,13 +2,15 @@ dist: trusty
 sudo: require
 language: cpp
 
+compiler:
+  - gcc
+  - clang
+
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - gcc-5
-      - g++-5
       - cmake
       - cmake-data
       - python3

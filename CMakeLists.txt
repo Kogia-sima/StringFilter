@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 2.8.12)
 
 project(StringFilter)
 
-add_subdirectory(pybind11)
-
 set(VERSION_STRING 1.0.0)
 set(VERSION_MAJOR 1)
+set(CMAKE_CXX_STANDARD 11)
 
 include_directories(include)
 
+add_subdirectory(pybind11)
 add_subdirectory(example)
 
 add_library(StringFilterCpp SHARED
