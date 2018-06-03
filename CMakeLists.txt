@@ -9,7 +9,7 @@ set(VERSION_MAJOR 1)
 
 include_directories(include)
 
-add_library(StringFilterCpp
+add_library(StringFilterCpp SHARED
   src/StringView.cpp
   src/Node.cpp
   src/Parser.cpp
@@ -23,7 +23,7 @@ set_target_properties(StringFilterCpp
 
 pybind11_add_module(StringFilter src/export.cpp)
 
-target_link_libraries(StringFilter StringFilterCpp)
+target_link_libraries(StringFilter PRIVATE StringFilterCpp)
 
 install(
   DIRECTORY include/StringFilter
