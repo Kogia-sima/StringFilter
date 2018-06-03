@@ -11,6 +11,34 @@ StringView::StringView(const char* ptr) {
   M_length = strlen(ptr);
 }
 
+int StringView::find(const StringView& key) const noexcept {
+  const char* it1 = M_ptr;
+  const char* it2 = key.M_ptr;
+  const char* it3;
+  int i_max = M_length - key.M_length + 1;
+  int j;
+
+  for (int i = 0; i < i_max; ++i, ++it1) {
+    if (*it1 == *it2) {
+      it3 = it1;
+      for (j = 0; j < key.M_length; ++j) {
+        if (*it3 == *it2) {
+          ++it3;
+          ++it2;
+        } else {
+          break;
+        }
+      }
+      if (j == key.M_length) {
+        return i;
+      }
+      it2 = key.M_ptr;
+    }
+  }
+
+  return -1;
+}
+
 StringView& StringView::operator=(const char* str) {
   M_ptr = str;
   M_length = strlen(str);

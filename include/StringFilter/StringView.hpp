@@ -28,6 +28,8 @@ class StringView {
 
   int size() const noexcept { return M_length; }
 
+  int find(const StringView& key) const noexcept;
+
   const char& operator[](int idx) const noexcept { return M_ptr[idx]; }
 
   StringView& operator=(const char* str);
