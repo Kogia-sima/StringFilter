@@ -21,9 +21,12 @@ set_target_properties(StringFilterCpp
              SOVERSION ${VERSION_MAJOR}
 )
 
-pybind11_add_module(StringFilter src/export.cpp)
-
-target_link_libraries(StringFilter PRIVATE StringFilterCpp)
+pybind11_add_module(StringFilter
+  src/StringView.cpp
+  src/Node.cpp
+  src/Parser.cpp
+  src/StringFilter.cpp
+  src/export.cpp)
 
 install(
   DIRECTORY include/StringFilter
