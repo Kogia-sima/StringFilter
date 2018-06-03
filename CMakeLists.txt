@@ -1,25 +1,33 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.12)
 
 project(StringFilter)
+
+add_subdirectory(pybind11)
 
 set(VERSION_STRING 1.0.0)
 set(VERSION_MAJOR 1)
 
 include_directories(include)
 
-add_library(StringFilter
+add_library(StringFilterCpp
   src/StringView.cpp
   src/Node.cpp
   src/Parser.cpp
   src/StringFilter.cpp)
-set_target_properties(StringFilter
+
+set_target_properties(StringFilterCpp PROPERTIES OUTPUT_NAME StringFilter)
+set_target_properties(StringFilterCpp
   PROPERTIES VERSION ${VERSION_STRING}
              SOVERSION ${VERSION_MAJOR}
 )
+
+pybind11_add_module(StringFilter src/export.cpp)
+
+target_link_libraries(StringFilter StringFilterCpp)
 
 install(
   DIRECTORY include/StringFilter
   DESTINATION include
   COMPONENT includes)
 
-install(TARGETS StringFilter DESTINATION lib COMPONENT libs)
+install(TARGETS StringFilterCpp DESTINATION lib COMPONENT libs)
