@@ -15,6 +15,6 @@ PYBIND11_MODULE(StringFilter, m) {
   )pbdoc";
 
   py::class_<StringFilter>(m, "StringFilter")
-    .def(py::init<const char*>())
-    .def("is_valid", &StringFilter::is_valid);
+    .def(py::init<const char*>(), py::arg("key"))
+    .def("is_valid", &StringFilter::is_valid, py::arg("sentence"));
 }
